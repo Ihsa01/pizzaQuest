@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Quest</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="disclaimer-popup">
+        <div class="popup-content">
+            <h2>Disclaimer</h2>
+            <p>This game is purely for entertainment purposes. Any resemblance to real-life events, people, or pizza competitions is purely coincidental. Play responsibly and enjoy your adventure!</p>
+            <button id="disclaimer-ok-btn">OK</button>
+        </div>
+    </div>
+    <div id="home-container">
+        <div class="menu">
+            <img src="assets/images/main.webp" alt="background" id="background-image">
+            <img src="assets/images/main.webp" alt="image_main" id="main-image" />
+            <div class="menu-options">
+                <button id="start-btn">START</button>
+                <!-- <button id="about-btn">About</button>
+                <button id="settings-btn">Settings</button> -->
+            </div>
+        </div>
+    </div>
+    <div id="game-container" class="hidden">
+        <button id="exit-btn" class="exit-button">✕</button>
+        <p id="story-text"></p>
+        <div id="choices" class="choices"></div>
+    </div>
+</body>
+
+</html>

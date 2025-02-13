@@ -144,11 +144,6 @@ document.addEventListener("DOMContentLoaded", function () {
             ]
         },
         fifteen: {
-            text: "YGot arrested. YOU LOSE!",
-            image: "assets/images/arrest.webp",
-
-        },
-        fifteen: {
             text: "You Got arrested. YOU LOSE!",
             image: "assets/images/arrest.webp",
 
@@ -188,13 +183,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         typeText(scene.text, 0, () => {
             choicesContainer.style.display = "flex";
-            scene.choices.forEach(choice => {
+            scene.choices.forEach((choice, index) => {
                 const btn = document.createElement("button");
-                btn.classList.add("choice-btn");
+                btn.classList.add("choice-btn", "fade-in"); 
                 btn.innerText = choice.text;
                 btn.onclick = () => displayScene(choice.next);
+                
+                btn.style.animationDelay = `${index * 0.2}s`; 
                 choicesContainer.appendChild(btn);
             });
+            
         });
     }
 

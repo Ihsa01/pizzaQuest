@@ -153,8 +153,6 @@ body {
     margin-bottom: 20px;
     overflow-wrap: break-word; 
 }
-
-/* Choices */
 .choices {
     max-width: 80%;
     display: flex;
@@ -213,7 +211,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.7); /* Dark translucent background */
+    background: rgba(0, 0, 0, 0.7); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,7 +219,7 @@ body {
 }
 
 .popup-content {
-    background: rgba(255, 255, 255, 0.9); /* Light translucent popup */
+    background: rgba(255, 255, 255, 0.9); 
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -255,6 +253,21 @@ body {
 
 
 @media (max-width: 768px) {
+    #home-container {
+        width: 100%;
+        height: 100dvh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #game-container {
+        width: 100vw;
+        height: 100dvh;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
     #story-text {
         width: 85%;
         font-size: 1.2em;
@@ -289,6 +302,21 @@ body {
 }
 
 @media (max-width: 480px) {
+    #home-container img{
+        width: 100%;
+        height: 100dvh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #game-container {
+        width: 100%;
+        height: 100dvh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
     #story-text {
         font-size: 1em;
         padding: 8px;

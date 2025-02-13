@@ -173,6 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
         backgroundOverlay.style.backgroundImage = `url(${scene.image})`;
 
         document.getElementById("game-container").style.backgroundImage = `url(${scene.image})`;
+        
 
         const storyText = document.getElementById("story-text");
         storyText.innerText = "";
@@ -204,26 +205,14 @@ document.addEventListener("DOMContentLoaded", function () {
             callback();
         }
     }
-    let bgMusic = new Audio("assets/sounds/bg.mp3"); 
-    bgMusic.loop = true; 
-    bgMusic.volume = 0.5; 
-
-    function playBackgroundMusic() {
-        if (bgMusic.paused) {
-            bgMusic.play().catch(error => console.log("Autoplay blocked:", error));
-        }
-    }
-    function stopBackgroundMusic() {
-        bgMusic.pause();
-        bgMusic.currentTime = 0; 
-    }
+    
     document.getElementById("disclaimer-ok-btn").addEventListener("click", function() {
         document.getElementById("disclaimer-popup").style.display = "none";
     });
 
 
     document.getElementById("start-btn").addEventListener("click", function () {
-        playBackgroundMusic();
+   
         homeContainer.classList.add("hidden");
         gameContainer.classList.remove("hidden");
         displayScene("start");
@@ -231,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     document.getElementById("exit-btn").addEventListener("click", function () {
-        stopBackgroundMusic();
+    
         homeContainer.classList.remove("hidden");
         gameContainer.classList.add("hidden");
     })

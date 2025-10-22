@@ -1,16 +1,21 @@
-name: CI
+name: Release Pipeline
 
 on:
   push:
-    branches: [ main ]
+    tags:
+      - 'v*.*.*' # triggers on version tags like v1.0.0
 
 jobs:
-  build:
+  create-release:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run a test
-        run: echo "Hello, world!"
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

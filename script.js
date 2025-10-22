@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
             image: "assets/images/start.webp",
             choices: [
                 { text: "Jump out of the window right now!", next: "one" },
-                { text: "Slingshot yourself out of the window", next: "two" },
+                { text: "Slingshot yourself out of the window outside", next: "two" },
                 { text: "Steal your neighbour's skateboard to go to the festival", next: "three" },
 
             ]
